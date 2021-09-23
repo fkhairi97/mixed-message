@@ -7,13 +7,12 @@ const word = [
 const createMessage = () => {
     let message = [];
     for (let i = 0; i < word.length; i++) {
-        for (let j = 0; j < word[i].length; j++) {
-            let ranNum = Math.floor(Math.random() * word[i].length);
-            message.push(word[i][ranNum]);
-        }
+        const ranNum = Math.floor(Math.random() * word[i].length);
+        const ranWord = word[i][ranNum];
+        message.push(ranWord);
     }
     message = message.join(' ');
     return message;
 }
 
-console.log(createMessage);
+console.log(createMessage());
